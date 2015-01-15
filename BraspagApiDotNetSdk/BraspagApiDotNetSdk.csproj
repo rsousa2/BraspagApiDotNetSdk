@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F007E864-533E-429F-B493-44B598287BA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BraspagApiDotNetSdk</RootNamespace>
+    <AssemblyName>BraspagApiDotNetSdk</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net35\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.0.1\lib\net35\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Address.cs" />
+    <Compile Include="Contracts\Customer.cs" />
+    <Compile Include="Contracts\Enum\CarrierEnum.cs" />
+    <Compile Include="Contracts\Enum\BrandEnum.cs" />
+    <Compile Include="Contracts\CaptureRequest.cs" />
+    <Compile Include="Contracts\CaptureResponse.cs" />
+    <Compile Include="Contracts\Card.cs" />
+    <Compile Include="Contracts\Enum\InterestTypeEnum.cs" />
+    <Compile Include="Contracts\Error.cs" />
+    <Compile Include="Contracts\BaseResponse.cs" />
+    <Compile Include="Contracts\ExtraData.cs" />
+    <Compile Include="Contracts\Interest.cs" />
+    <Compile Include="Contracts\Link.cs" />
+    <Compile Include="Contracts\MerchantAuthentication.cs" />
+    <Compile Include="Contracts\Payment.cs" />
+    <Compile Include="Contracts\PaymentCredentials.cs" />
+    <Compile Include="Contracts\Payments\BoletoPayment.cs" />
+    <Compile Include="Contracts\Payments\CreditCardPayment.cs" />
+    <Compile Include="Contracts\Payments\DebitCardPayment.cs" />
+    <Compile Include="Contracts\Payments\EletronicTransferPayment.cs" />
+    <Compile Include="Contracts\Sale.cs" />
+    <Compile Include="Contracts\VoidResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IPagadorApiService.cs" />
+    <Compile Include="Services\PagadorApiService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="BraspagApiDotNetSdk.nuspec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(SolutionDir)NuGet.exe" pack "$(ProjectPath)" -Properties OutDir="$(OutDir.Trim('\\'))\\" -Prop Configuration=$(ConfigurationName) -IncludeReferencedProjects</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
