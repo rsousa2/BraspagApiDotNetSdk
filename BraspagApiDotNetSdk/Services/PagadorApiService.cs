@@ -16,7 +16,7 @@ namespace BraspagApiDotNetSdk.Services
 
 		public PagadorApiService()
 		{
-			RestClient = new RestClient { BaseUrl = new Uri(ConfigurationManager.AppSettings["apiRootUrl"]) };
+			RestClient = new RestClient { BaseUrl = new Uri(ConfigurationManager.AppSettings["braspagApiUrl"]) };
 			JsonDeserializer = new JsonDeserializer();
 		}
 
@@ -29,7 +29,7 @@ namespace BraspagApiDotNetSdk.Services
 
 			var response = RestClient.Execute<Sale>(restRequest);
 
-			var saleResponse = response.StatusCode == HttpStatusCode.OK
+			var saleResponse = response.StatusCode == HttpStatusCode.Created
 				? JsonDeserializer.Deserialize<Sale>(response)
 				: new Sale { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
 

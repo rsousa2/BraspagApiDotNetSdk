@@ -38,7 +38,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.OK,
+				StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validCreditCardSaleResponse),
 				Data = validCreditCardSaleResponse
 			});
@@ -62,7 +62,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.OK,
+				StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validCreditCardSaleResponse),
 				Data = validCreditCardSaleResponse
 			});
@@ -113,7 +113,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.OK,
+				StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validCreditCardSaleResponse),
 				Data = validCreditCardSaleResponse
 			});
@@ -161,7 +161,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.OK,
+				StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validDebitCardSaleResponse),
 				Data = validDebitCardSaleResponse
 			});
@@ -212,7 +212,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.OK,
+				StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validEletronicTransferSaleResponse),
 				Data = validEletronicTransferSaleResponse
 			});
@@ -283,7 +283,7 @@ namespace BraspagApiDotNetSdk.Tests
 			return new Sale
 			{
 				Customer = CustomerHelper.CreateCustomer(),
-				HttpStatus = HttpStatusCode.OK,
+				HttpStatus = HttpStatusCode.Created,
 				MerchantOrderId = Guid.NewGuid().ToString(),
 				Payment = payment,
 				ErrorDataCollection = null
