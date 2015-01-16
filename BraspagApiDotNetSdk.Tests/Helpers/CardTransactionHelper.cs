@@ -13,8 +13,6 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
             return new CreditCardPayment
             {
                 Amount = 15057,
-                Country = "BRA",
-                Currency = "BRL",
                 CreditCard = new Card
                 {
                     Holder = "Teste T T Testando",
@@ -23,7 +21,6 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                     Brand = BrandEnum.Master
                 },
                 Installments = 3,
-                Interest = InterestTypeEnum.ByMerchant,
                 Capture = false,
                 Authenticate = false,
                 Carrier = CarrierEnum.Simulado,
@@ -45,8 +42,6 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			{
 				Amount = 15057,
 				CapturedAmount = null,
-				Country = "BRA",
-				Currency = "BRL",
 				Credentials = null,
 				Carrier = CarrierEnum.Simulado,
 				ExtraDataCollection = new List<ExtraData>
@@ -93,8 +88,6 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			return new DebitCardPayment
 			{
 				Amount = 15057,
-				Country = "BRA",
-				Currency = "BRL",
 				DebitCard = new Card()
 				{
 					Holder = "Teste T T Testando",
@@ -121,8 +114,6 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			{
 				Amount = 15057,
 				CapturedAmount = null,
-				Country = "BRA",
-				Currency = "BRL",
 				Credentials = null,
 				Carrier = CarrierEnum.Cielo,
 				PaymentId = paymentId,

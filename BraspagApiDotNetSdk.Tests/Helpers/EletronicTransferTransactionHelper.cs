@@ -26,8 +26,6 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			{
 				Amount = 15700,
 				Carrier = CarrierEnum.Bradesco,
-				Country = "BRA",
-				Currency = "BRL",
 				PaymentId = paymentId,
 				ReasonCode = 0,
 				Type = "EletronicTransfer",

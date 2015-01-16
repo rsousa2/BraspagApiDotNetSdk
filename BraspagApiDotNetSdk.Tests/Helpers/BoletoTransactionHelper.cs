@@ -13,9 +13,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
             var boletoTransaction = new BoletoPayment
             {
 	            Amount = 15057,
-				Carrier = CarrierEnum.Bradesco,
-				Country = "BRA",
-				Currency = "BRL"
+				Carrier = CarrierEnum.Bradesco
             };
 
             return boletoTransaction;
@@ -29,8 +27,6 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			{
 				Amount = 15057,
 				Carrier = CarrierEnum.Bradesco,
-				Country = "BRA",
-				Currency = "BRL",
 				PaymentId = paymentId,
 				ReasonCode = 0,
 				Type = "Boleto",

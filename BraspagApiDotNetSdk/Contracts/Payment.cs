@@ -1,4 +1,5 @@
-﻿using BraspagApiDotNetSdk.Contracts.Enum;
+﻿using System.Configuration;
+using BraspagApiDotNetSdk.Contracts.Enum;
 using System;
 using System.Collections.Generic;
 
@@ -8,8 +9,8 @@ namespace BraspagApiDotNetSdk.Contracts
 	{
 		public Payment()
 		{
-			Country = "BRA";
-			Currency = "BRL";
+			Country = ConfigurationManager.AppSettings["braspagDefaultCountry"];
+			Currency = ConfigurationManager.AppSettings["braspagDefaultCurrency"];
 		}
 
 		public Guid PaymentId { get; set; }
