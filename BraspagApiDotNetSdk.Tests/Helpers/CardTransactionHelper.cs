@@ -13,6 +13,8 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
             return new CreditCardPayment
             {
                 Amount = 15057,
+                Country = "BRA",
+                Currency = "BRL",
                 CreditCard = new Card
                 {
                     Holder = "Teste T T Testando",
@@ -21,9 +23,10 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                     Brand = BrandEnum.Master
                 },
                 Installments = 3,
+                Interest = InterestTypeEnum.ByMerchant,
                 Capture = false,
                 Authenticate = false,
-                Carrier = CarrierEnum.Simulado,
+                Provider = ProviderEnum.Simulado,
                 ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
@@ -42,8 +45,10 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			{
 				Amount = 15057,
 				CapturedAmount = null,
+				Country = "BRA",
+				Currency = "BRL",
 				Credentials = null,
-				Carrier = CarrierEnum.Simulado,
+				Provider = ProviderEnum.Simulado,
 				ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
@@ -88,6 +93,8 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			return new DebitCardPayment
 			{
 				Amount = 15057,
+				Country = "BRA",
+				Currency = "BRL",
 				DebitCard = new Card()
 				{
 					Holder = "Teste T T Testando",
@@ -95,7 +102,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 					ExpirationDate = "12/2015",
 					Brand = BrandEnum.Master
 				},
-				Carrier = CarrierEnum.Cielo,
+				Provider = ProviderEnum.Cielo,
 				ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
@@ -114,8 +121,10 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			{
 				Amount = 15057,
 				CapturedAmount = null,
+				Country = "BRA",
+				Currency = "BRL",
 				Credentials = null,
-				Carrier = CarrierEnum.Cielo,
+				Provider = ProviderEnum.Cielo,
 				PaymentId = paymentId,
 				ReasonCode = 4,
 				ReasonMessage = "Waiting",

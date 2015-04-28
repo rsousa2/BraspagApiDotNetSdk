@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using BraspagApiDotNetSdk.Contracts.Enum;
+﻿using BraspagApiDotNetSdk.Contracts.Enum;
 using System;
 using System.Collections.Generic;
 
@@ -9,8 +8,8 @@ namespace BraspagApiDotNetSdk.Contracts
 	{
 		public Payment()
 		{
-			Country = ConfigurationManager.AppSettings["braspagDefaultCountry"];
-			Currency = ConfigurationManager.AppSettings["braspagDefaultCurrency"];
+			Country = "BRA";
+			Currency = "BRL";
 		}
 
 		public Guid PaymentId { get; set; }
@@ -27,7 +26,7 @@ namespace BraspagApiDotNetSdk.Contracts
 
 		public string Country { get; set; }
 
-		public CarrierEnum Carrier { get; set; }
+		public ProviderEnum Provider { get; set; }
 
 		public PaymentCredentials Credentials { get; set; }
 
@@ -38,6 +37,10 @@ namespace BraspagApiDotNetSdk.Contracts
 		public byte ReasonCode { get; set; }
 
 		public string ReasonMessage { get; set; }
+
+        public string ProviderReturnCode { get; set; }
+
+        public string ProviderReturnMessage { get; set; }
 
 		public byte Status { get; set; }
 

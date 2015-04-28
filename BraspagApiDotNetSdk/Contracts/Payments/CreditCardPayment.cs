@@ -1,6 +1,4 @@
-﻿using System;
-using System.Configuration;
-using BraspagApiDotNetSdk.Contracts.Enum;
+﻿using BraspagApiDotNetSdk.Contracts.Enum;
 
 namespace BraspagApiDotNetSdk.Contracts.Payments
 {
@@ -9,9 +7,6 @@ namespace BraspagApiDotNetSdk.Contracts.Payments
 		public CreditCardPayment()
 		{
 			Type = "CreditCard";
-			Capture = Convert.ToBoolean(ConfigurationManager.AppSettings["braspagDefaultCapture"]);
-			Authenticate = Convert.ToBoolean(ConfigurationManager.AppSettings["braspagDefaultAuthenticate"]);
-			Interest = (InterestTypeEnum)System.Enum.Parse(typeof(InterestTypeEnum), ConfigurationManager.AppSettings["braspagDefaultInterest"]);
 		}
 		
 		public long ServiceTaxAmount { get; set; }
@@ -23,6 +18,8 @@ namespace BraspagApiDotNetSdk.Contracts.Payments
 		public bool Capture { get; set; }
 
 		public bool Authenticate { get; set; }
+
+        public bool Recurrent { get; set; }
 
 		public Card CreditCard { get; set; }
 

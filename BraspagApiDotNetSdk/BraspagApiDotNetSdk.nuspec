@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0"?>
 <package>
 	<metadata>
-		<id>BraspagApiDotNetSdk</id>
-		<version>1.0.0.1</version>
+		<id>Braspag.ApiDotNetSdk</id>
+		<version>2.0.2</version>
 		<authors>Braspag</authors>
 		<owners>Braspag</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Implementação do Sdk Api Pagador</description>
 		<releaseNotes>
-			- Release inicial.
+			- Atualização do Create para o V2
 		</releaseNotes>
 		<copyright>Braspag Copyright 2015</copyright>
 	</metadata>

@@ -96,7 +96,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			response.Payment.Amount.Should().Be(CardTransactionHelper.CreateCreditCardPaymentRequest().Amount);
 			response.Payment.CapturedAmount.Should().Be(CardTransactionHelper.CreateCreditCardPaymentRequest().CapturedAmount);
-			response.Payment.Carrier.Should().Be(CardTransactionHelper.CreateCreditCardPaymentRequest().Carrier);
+			response.Payment.Provider.Should().Be(CardTransactionHelper.CreateCreditCardPaymentRequest().Provider);
 			response.Payment.Country.Should().Be(CardTransactionHelper.CreateCreditCardPaymentRequest().Country);
 			response.Payment.Credentials.Should().Be(CardTransactionHelper.CreateCreditCardPaymentRequest().Credentials);
 			response.Payment.Currency.Should().Be(CardTransactionHelper.CreateCreditCardPaymentRequest().Currency);

@@ -16,7 +16,7 @@ namespace BraspagApiDotNetSdk.Services
 
 		public PagadorApiService()
 		{
-			RestClient = new RestClient { BaseUrl = new Uri(ConfigurationManager.AppSettings["braspagApiUrl"]) };
+			RestClient = new RestClient { BaseUrl = new Uri(ConfigurationManager.AppSettings["apiRootUrl"]) };
 			JsonDeserializer = new JsonDeserializer();
 		}
 

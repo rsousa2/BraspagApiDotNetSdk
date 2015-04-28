@@ -38,7 +38,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.Created,
+				StatusCode = HttpStatusCode.OK,
 				Content = new JsonSerializer().Serialize(validCreditCardSaleResponse),
 				Data = validCreditCardSaleResponse
 			});
@@ -62,7 +62,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.Created,
+                StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validCreditCardSaleResponse),
 				Data = validCreditCardSaleResponse
 			});
@@ -94,7 +94,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			result.Payment.Amount.Should().Be(CardTransactionHelper.CreateCreditCardPaymentResponse().Amount);
 			result.Payment.CapturedAmount.Should().Be(CardTransactionHelper.CreateCreditCardPaymentResponse().CapturedAmount);
-			result.Payment.Carrier.Should().Be(CardTransactionHelper.CreateCreditCardPaymentResponse().Carrier);
+			result.Payment.Provider.Should().Be(CardTransactionHelper.CreateCreditCardPaymentResponse().Provider);
 			result.Payment.Country.Should().Be(CardTransactionHelper.CreateCreditCardPaymentResponse().Country);
 			result.Payment.Credentials.Should().Be(CardTransactionHelper.CreateCreditCardPaymentResponse().Credentials);
 			result.Payment.Currency.Should().Be(CardTransactionHelper.CreateCreditCardPaymentResponse().Currency);
@@ -161,7 +161,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.Created,
+                StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validDebitCardSaleResponse),
 				Data = validDebitCardSaleResponse
 			});
@@ -193,7 +193,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			response.Payment.Amount.Should().Be(CardTransactionHelper.CreateDebitCardPaymentResponse().Amount);
 			response.Payment.CapturedAmount.Should().Be(CardTransactionHelper.CreateDebitCardPaymentResponse().CapturedAmount);
-			response.Payment.Carrier.Should().Be(CardTransactionHelper.CreateDebitCardPaymentResponse().Carrier);
+			response.Payment.Provider.Should().Be(CardTransactionHelper.CreateDebitCardPaymentResponse().Provider);
 			response.Payment.Country.Should().Be(CardTransactionHelper.CreateDebitCardPaymentResponse().Country);
 			response.Payment.Credentials.Should().Be(CardTransactionHelper.CreateDebitCardPaymentResponse().Credentials);
 			response.Payment.Currency.Should().Be(CardTransactionHelper.CreateDebitCardPaymentResponse().Currency);
@@ -212,7 +212,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			_mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
 			{
-				StatusCode = HttpStatusCode.Created,
+                StatusCode = HttpStatusCode.Created,
 				Content = new JsonSerializer().Serialize(validEletronicTransferSaleResponse),
 				Data = validEletronicTransferSaleResponse
 			});
@@ -244,7 +244,7 @@ namespace BraspagApiDotNetSdk.Tests
 
 			response.Payment.Amount.Should().Be(EletronicTransferTransactionHelper.EletronicTransferTransactionResponse().Amount);
 			response.Payment.CapturedAmount.Should().Be(EletronicTransferTransactionHelper.EletronicTransferTransactionResponse().CapturedAmount);
-			response.Payment.Carrier.Should().Be(EletronicTransferTransactionHelper.EletronicTransferTransactionResponse().Carrier);
+			response.Payment.Provider.Should().Be(EletronicTransferTransactionHelper.EletronicTransferTransactionResponse().Provider);
 			response.Payment.Country.Should().Be(EletronicTransferTransactionHelper.EletronicTransferTransactionResponse().Country);
 			response.Payment.Credentials.Should().Be(EletronicTransferTransactionHelper.EletronicTransferTransactionResponse().Credentials);
 			response.Payment.Currency.Should().Be(EletronicTransferTransactionHelper.EletronicTransferTransactionResponse().Currency);
@@ -283,7 +283,7 @@ namespace BraspagApiDotNetSdk.Tests
 			return new Sale
 			{
 				Customer = CustomerHelper.CreateCustomer(),
-				HttpStatus = HttpStatusCode.Created,
+				HttpStatus = HttpStatusCode.OK,
 				MerchantOrderId = Guid.NewGuid().ToString(),
 				Payment = payment,
 				ErrorDataCollection = null
