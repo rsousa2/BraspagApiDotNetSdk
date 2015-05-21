@@ -32,5 +32,7 @@ namespace BraspagApiDotNetSdk.Contracts.Payments
 		public string AuthorizationCode { get; set; }
 
 		public string SoftDescriptor { get; set; }
+
+        public Card NewCard { get; set; }
 	}
 }

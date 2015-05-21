@@ -2,8 +2,13 @@
 using System;
 using System.Collections.Generic;
 
+using BraspagApiDotNetSdk.Services;
+
+using Newtonsoft.Json;
+
 namespace BraspagApiDotNetSdk.Contracts
 {
+    [JsonConverter(typeof(PaymentConverter))]
 	public class Payment
 	{
 		public Payment()

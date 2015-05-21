@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using BraspagApiDotNetSdk.Contracts;
+﻿using BraspagApiDotNetSdk.Contracts;
+using Newtonsoft.Json;
 using RestSharp;
-using System;
-using System.Configuration;
 using RestSharp.Deserializers;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Net;
 
 namespace BraspagApiDotNetSdk.Services
 {
@@ -30,8 +31,8 @@ namespace BraspagApiDotNetSdk.Services
 			var response = RestClient.Execute<Sale>(restRequest);
 
 			var saleResponse = response.StatusCode == HttpStatusCode.Created
-				? JsonDeserializer.Deserialize<Sale>(response)
-				: new Sale { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+				? JsonConvert.DeserializeObject<Sale>(response.Content)
+                : new Sale { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
 
 			saleResponse.HttpStatus = response.StatusCode;
 
