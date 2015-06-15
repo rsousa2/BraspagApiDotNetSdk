@@ -14,7 +14,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			{
 				Type = "EletronicTransfer",
 				Amount = 15700,
-				Provider = ProviderEnum.Bradesco
+                Provider = CarrierEnum.Bradesco
 			};
 		}
 
@@ -25,7 +25,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 			return new EletronicTransferPayment
 			{
 				Amount = 15700,
-				Provider = ProviderEnum.Bradesco,
+                Provider = CarrierEnum.Bradesco,
 				Country = "BRA",
 				Currency = "BRL",
 				PaymentId = paymentId,

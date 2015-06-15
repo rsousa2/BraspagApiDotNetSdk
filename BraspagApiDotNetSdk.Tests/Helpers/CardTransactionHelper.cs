@@ -6,7 +6,7 @@ using BraspagApiDotNetSdk.Contracts.Payments;
 
 namespace BraspagApiDotNetSdk.Tests.Helpers
 {
-	public static class CardTransactionHelper
+    public static class CardTransactionHelper
     {
         public static CreditCardPayment CreateCreditCardPaymentRequest()
         {
@@ -26,7 +26,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                 Interest = InterestTypeEnum.ByMerchant,
                 Capture = false,
                 Authenticate = false,
-                Provider = ProviderEnum.Simulado,
+                Provider = CarrierEnum.Simulado,
                 ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
@@ -38,18 +38,18 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
             };
         }
 
-		public static Payment CreateCreditCardPaymentResponse()
-		{
-			var paymentId = Guid.NewGuid();
-			return new Payment
-			{
-				Amount = 15057,
-				CapturedAmount = null,
-				Country = "BRA",
-				Currency = "BRL",
-				Credentials = null,
-				Provider = ProviderEnum.Simulado,
-				ExtraDataCollection = new List<ExtraData>
+        public static Payment CreateCreditCardPaymentResponse()
+        {
+            var paymentId = Guid.NewGuid();
+            return new Payment
+            {
+                Amount = 15057,
+                CapturedAmount = null,
+                Country = "BRA",
+                Currency = "BRL",
+                Credentials = null,
+                Provider = CarrierEnum.Simulado,
+                ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
                     {
@@ -57,20 +57,20 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                         Value = "teste"
                     }
                 },
-				PaymentId = paymentId,
-				ReasonCode = 0,
-				ReasonMessage = "Successful",
-				ReturnUrl = null,
-				VoidedAmount = null,
-				Status = 1,
-				Type = "CreditCard",
-				Links = new List<Link>
+                PaymentId = paymentId,
+                ReasonCode = 0,
+                ReasonMessage = "Successful",
+                ReturnUrl = null,
+                VoidedAmount = null,
+                Status = 1,
+                Type = "CreditCard",
+                Links = new List<Link>
 				{
 					new Link
 					{
-						  Href = "https://apisandbox.braspag.com.br/v1/sales/" + paymentId,
-						  Method = "GET",
-						  Rel = "self"
+                        Href = "https://apisandbox.braspag.com.br/v1/sales/" + paymentId,
+						Method = "GET",
+						Rel = "self"
 					},
 					new Link
 					{
@@ -85,25 +85,25 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 						Rel = "void"
 					}
 				}
-			};
-		}
+            };
+        }
 
-		public static DebitCardPayment CreateDebitCardPaymentRequest()
-		{
-			return new DebitCardPayment
-			{
-				Amount = 15057,
-				Country = "BRA",
-				Currency = "BRL",
-				DebitCard = new Card()
-				{
-					Holder = "Teste T T Testando",
-					CardNumber = "4532117080573700",
-					ExpirationDate = "12/2015",
-					Brand = BrandEnum.Master
-				},
-				Provider = ProviderEnum.Cielo,
-				ExtraDataCollection = new List<ExtraData>
+        public static DebitCardPayment CreateDebitCardPaymentRequest()
+        {
+            return new DebitCardPayment
+            {
+                Amount = 15057,
+                Country = "BRA",
+                Currency = "BRL",
+                DebitCard = new Card()
+                {
+                    Holder = "Teste T T Testando",
+                    CardNumber = "4532117080573700",
+                    ExpirationDate = "12/2015",
+                    Brand = BrandEnum.Master
+                },
+                Provider = CarrierEnum.Cielo,
+                ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
                     {
@@ -111,27 +111,27 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                         Value = "teste"
                     }
                 }
-			};
-		}
+            };
+        }
 
-		public static Payment CreateDebitCardPaymentResponse()
-		{
-			var paymentId = Guid.NewGuid();
-			return new Payment
-			{
-				Amount = 15057,
-				CapturedAmount = null,
-				Country = "BRA",
-				Currency = "BRL",
-				Credentials = null,
-				Provider = ProviderEnum.Cielo,
-				PaymentId = paymentId,
-				ReasonCode = 4,
-				ReasonMessage = "Waiting",
-				ReturnUrl = null,
-				VoidedAmount = null,
-				Status = 0,
-				Links = new List<Link>
+        public static Payment CreateDebitCardPaymentResponse()
+        {
+            var paymentId = Guid.NewGuid();
+            return new Payment
+            {
+                Amount = 15057,
+                CapturedAmount = null,
+                Country = "BRA",
+                Currency = "BRL",
+                Credentials = null,
+                Provider = CarrierEnum.Cielo,
+                PaymentId = paymentId,
+                ReasonCode = 4,
+                ReasonMessage = "Waiting",
+                ReturnUrl = null,
+                VoidedAmount = null,
+                Status = 0,
+                Links = new List<Link>
 				{
 					new Link
 					{
@@ -139,8 +139,9 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 						  Method = "GET",
 						  Rel = "self"
 					}
-				}
-			};
-		}
+				},
+                Type = "debitcard"
+            };
+        }
     }
 }
