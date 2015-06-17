@@ -1,6 +1,6 @@
 ﻿namespace BraspagApiDotNetSdk.Contracts.Enum
 {
-	public enum CarrierEnum
+	public enum ProviderEnum
 	{	   
         Cielo,
         Redecard,
