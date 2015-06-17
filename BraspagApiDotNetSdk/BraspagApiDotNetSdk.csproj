@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Contracts\Address.cs" />
     <Compile Include="Contracts\Customer.cs" />
-    <Compile Include="Contracts\Enum\CarrierEnum.cs" />
+    <Compile Include="Contracts\Enum\ProviderEnum.cs" />
     <Compile Include="Contracts\Enum\BrandEnum.cs" />
     <Compile Include="Contracts\CaptureRequest.cs" />
     <Compile Include="Contracts\CaptureResponse.cs" />

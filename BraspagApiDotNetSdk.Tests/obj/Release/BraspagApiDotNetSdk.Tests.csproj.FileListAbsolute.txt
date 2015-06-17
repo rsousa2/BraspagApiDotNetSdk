@@ -1,0 +1,17 @@
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\BraspagApiDotNetSdk.Tests.dll.config
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\BraspagApiDotNetSdk.Tests.dll
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\BraspagApiDotNetSdk.Tests.pdb
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\BraspagApiDotNetSdk.dll
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\FluentAssertions.dll
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\Moq.dll
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\RestSharp.dll
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\Newtonsoft.Json.dll
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\BraspagApiDotNetSdk.pdb
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\FluentAssertions.pdb
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\FluentAssertions.xml
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\Moq.xml
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\RestSharp.xml
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\bin\Release\Newtonsoft.Json.xml
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\obj\Release\BraspagApiDotNetSdk.Tests.csprojResolveAssemblyReference.cache
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\obj\Release\BraspagApiDotNetSdk.Tests.dll
+C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk.Tests\obj\Release\BraspagApiDotNetSdk.Tests.pdb

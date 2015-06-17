@@ -31,7 +31,7 @@ namespace BraspagApiDotNetSdk.Contracts
 
 		public string Country { get; set; }
 
-		public CarrierEnum Provider { get; set; }
+		public ProviderEnum Provider { get; set; }
 
 		public PaymentCredentials Credentials { get; set; }
 

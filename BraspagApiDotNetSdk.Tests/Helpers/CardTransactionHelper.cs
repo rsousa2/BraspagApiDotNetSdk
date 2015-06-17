@@ -26,7 +26,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                 Interest = InterestTypeEnum.ByMerchant,
                 Capture = false,
                 Authenticate = false,
-                Provider = CarrierEnum.Simulado,
+                Provider = ProviderEnum.Simulado,
                 ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
@@ -48,7 +48,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                 Country = "BRA",
                 Currency = "BRL",
                 Credentials = null,
-                Provider = CarrierEnum.Simulado,
+                Provider = ProviderEnum.Simulado,
                 ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
@@ -102,7 +102,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                     ExpirationDate = "12/2015",
                     Brand = BrandEnum.Master
                 },
-                Provider = CarrierEnum.Cielo,
+                Provider = ProviderEnum.Cielo,
                 ExtraDataCollection = new List<ExtraData>
                 {
                     new ExtraData()
@@ -124,7 +124,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
                 Country = "BRA",
                 Currency = "BRL",
                 Credentials = null,
-                Provider = CarrierEnum.Cielo,
+                Provider = ProviderEnum.Cielo,
                 PaymentId = paymentId,
                 ReasonCode = 4,
                 ReasonMessage = "Waiting",
