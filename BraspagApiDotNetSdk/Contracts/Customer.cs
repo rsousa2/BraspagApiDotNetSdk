@@ -4,11 +4,6 @@ namespace BraspagApiDotNetSdk.Contracts
 {
 	public class Customer
 	{
-		public Customer()
-		{
-			Address = new Address();
-		}
-
 		public string Name { get; set; }
 
 		public string Identity { get; set; }
