@@ -63,16 +63,16 @@ namespace BraspagApiDotNetSdk.Services
 			return captureResponse;
 		}
 
-		public VoidResponse Void(Guid paymentId, MerchantAuthentication merchantAuthentication, int? amount)
+		public VoidResponse Void(Guid paymentId, MerchantAuthentication merchantAuthentication, VoidRequest voidRequest)
 		{
 			var restRequest = new RestRequest(@"sales/{paymentId}/void", Method.PUT) { RequestFormat = DataFormat.Json };
 			AddHeaders(restRequest, merchantAuthentication);
 
 			restRequest.AddUrlSegment("paymentId", paymentId.ToString());
 
-			if (amount != null)
+			if (voidRequest.Amount != null)
 			{
-				restRequest.AddQueryParameter("amount", amount.ToString());
+				restRequest.AddQueryParameter("amount", voidRequest.Amount.ToString());
 			}
 
 			var response = RestClient.Execute<VoidResponse>(restRequest);

@@ -1,4 +1,5 @@
-﻿using BraspagApiDotNetSdk.Contracts.Enum;
+﻿using BraspagApiDotNetSdk.Contracts.Antifraud;
+using BraspagApiDotNetSdk.Contracts.Enum;
 
 namespace BraspagApiDotNetSdk.Contracts.Payments
 {
@@ -32,6 +33,10 @@ namespace BraspagApiDotNetSdk.Contracts.Payments
 		public string AuthorizationCode { get; set; }
 
 		public string SoftDescriptor { get; set; }
+
+        public FraudAnalysis FraudAnalysis { get; set; }
+
+        public ExternalAuthentication ExternalAuthentication { get; set; }
 
         public Card NewCard { get; set; }
 	}

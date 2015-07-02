@@ -5,9 +5,12 @@ using System.Text;
 
 namespace BraspagApiDotNetSdk.Contracts.Enum
 {
-    public enum InterestTypeEnum
+    public enum HedgeEnum
     {
-        ByMerchant,
-        ByIssuer
+        Undefined = 0,
+        Low = 1,
+        Normal = 2,
+        High = 3,
+        Off = 4,
     }
 }

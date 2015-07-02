@@ -5,9 +5,9 @@ using System.Text;
 
 namespace BraspagApiDotNetSdk.Contracts.Enum
 {
-    public enum InterestTypeEnum
+    public enum AntifraudSequenceEnum
     {
-        ByMerchant,
-        ByIssuer
+        AnalyseFirst = 0,
+        AuthorizeFirst = 1,
     }
 }

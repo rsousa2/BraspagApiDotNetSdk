@@ -5,9 +5,11 @@ using System.Text;
 
 namespace BraspagApiDotNetSdk.Contracts.Enum
 {
-    public enum InterestTypeEnum
+    public enum GiftCategoryEnum
     {
-        ByMerchant,
-        ByIssuer
+        Undefined = 0,
+        Yes = 1,
+        No = 2,
+        Off = 3,
     }
 }

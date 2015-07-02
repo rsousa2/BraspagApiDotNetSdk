@@ -18,5 +18,7 @@
 		public string AuthorizationCode { get; set; }
 
 		public string SoftDescriptor { get; set; }
+
+        public string Eci { get; set; }
 	}
 }

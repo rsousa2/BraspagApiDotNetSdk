@@ -79,6 +79,7 @@
     <Compile Include="Helpers\EletronicTransferTransactionHelper.cs" />
     <Compile Include="Helpers\MerchantAuthenticationHelper.cs" />
     <Compile Include="Helpers\SaleHelper.cs" />
+    <Compile Include="Helpers\VoidTransactionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VoidTests.cs" />
   </ItemGroup>

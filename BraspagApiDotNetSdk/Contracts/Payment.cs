@@ -23,6 +23,8 @@ namespace BraspagApiDotNetSdk.Contracts
 
 		public long Amount { get; set; }
 
+        public DateTime ReceivedDate { get; set; }
+
 		public long? CapturedAmount { get; set; }
 
 		public long? VoidedAmount { get; set; }
@@ -48,6 +50,8 @@ namespace BraspagApiDotNetSdk.Contracts
         public string ProviderReturnMessage { get; set; }
 
 		public byte Status { get; set; }
+
+        public RecurrentPayment RecurrentPayment { get; set; }
 
 		public List<Link> Links { get; set; } 
 

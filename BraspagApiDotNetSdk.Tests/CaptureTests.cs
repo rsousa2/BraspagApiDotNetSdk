@@ -159,7 +159,7 @@ namespace BraspagApiDotNetSdk.Tests
 					{
 						Href = "self",
 						Method = "GET",
-						Rel = "https://apisandbox.pagador.com.br/v1/sales/" + Guid.NewGuid()
+						Rel = "https://apisandbox.pagador.com.br/v2/sales/" + Guid.NewGuid()
 					}
 				},
 				ReasonCode = 0,

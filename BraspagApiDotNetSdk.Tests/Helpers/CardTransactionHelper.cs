@@ -68,19 +68,19 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 				{
 					new Link
 					{
-                        Href = "https://apisandbox.braspag.com.br/v1/sales/" + paymentId,
+                        Href = "https://apisandbox.braspag.com.br/v2/sales/" + paymentId,
 						Method = "GET",
 						Rel = "self"
 					},
 					new Link
 					{
-						Href = "https://apisandbox.braspag.com.br/v1/sales/" + paymentId + "capture",
+						Href = "https://apisandbox.braspag.com.br/v2/sales/" + paymentId + "capture",
 						Method = "PUT",
 						Rel = "capture"
 					},
 					new Link
 					{
-						Href = "https://apisandbox.braspag.com.br/v1/sales/" + paymentId + "void",
+						Href = "https://apisandbox.braspag.com.br/v2/sales/" + paymentId + "void",
 						Method = "PUT",
 						Rel = "void"
 					}
@@ -135,7 +135,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 				{
 					new Link
 					{
-						  Href = "http://www.pagador.com.br/v1/sales/" + paymentId,
+						  Href = "http://www.pagador.com.br/v2/sales/" + paymentId,
 						  Method = "GET",
 						  Rel = "self"
 					}

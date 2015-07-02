@@ -9,6 +9,9 @@
         Itau,
         Brb,
         Caixa,
-        BancoDoBrasil
+        BancoDoBrasil,
+        Citibank,
+        Santander,
+        Hsbc
 	}
 }

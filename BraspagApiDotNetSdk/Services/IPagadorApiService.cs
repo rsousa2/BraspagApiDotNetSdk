@@ -9,7 +9,7 @@ namespace BraspagApiDotNetSdk.Services
 
 		CaptureResponse Capture(Guid paymentId, MerchantAuthentication merchantAuthentication, CaptureRequest captureRequest);
 
-		VoidResponse Void(Guid paymentId, MerchantAuthentication merchantAuthentication, int? amount);
+		VoidResponse Void(Guid paymentId, MerchantAuthentication merchantAuthentication, VoidRequest voidRequest);
 
 		Sale Get(Guid paymentId, MerchantAuthentication merchantAuthentication);
 	}

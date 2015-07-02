@@ -15,5 +15,7 @@ namespace BraspagApiDotNetSdk.Contracts
 		public DateTime? Birthdate { get; set; }
 
 		public Address Address { get; set; }
+
+        public Address DeliveryAddress { get; set; }
 	}
 }

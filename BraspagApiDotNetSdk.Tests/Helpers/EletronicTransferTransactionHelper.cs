@@ -37,7 +37,7 @@ namespace BraspagApiDotNetSdk.Tests.Helpers
 				{
 					new Link
 					{
-						  Href = "https://apisandbox.braspag.com.br/v1/sales/" + paymentId,
+						  Href = "https://apisandbox.braspag.com.br/v2/sales/" + paymentId,
 						  Method = "GET",
 						  Rel = "self"
 					}

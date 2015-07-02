@@ -46,7 +46,7 @@ namespace BraspagApiDotNetSdk.Tests
 				Data = validVoidSaleResponse
 			});
 
-			_service.Void(paymentId, MerchantAuthenticationHelper.CreateMerchantAuthentication(), null);
+			_service.Void(paymentId, MerchantAuthenticationHelper.CreateMerchantAuthentication(), VoidTransactionHelper.CreateValidVoidRequest());
 
 			_mockRestClient.Verify(m => m.Execute<VoidResponse>(It.IsAny<RestRequest>()), Times.Once);
 
@@ -74,7 +74,7 @@ namespace BraspagApiDotNetSdk.Tests
 				Data = validVoidSaleResponse
 			});
 
-			_service.Void(paymentId, MerchantAuthenticationHelper.CreateMerchantAuthentication(), amount);
+            _service.Void(paymentId, MerchantAuthenticationHelper.CreateMerchantAuthentication(), VoidTransactionHelper.CreateValidVoidRequest());
 
 			_mockRestClient.Verify(m => m.Execute<VoidResponse>(It.IsAny<RestRequest>()), Times.Once);
 
@@ -101,7 +101,7 @@ namespace BraspagApiDotNetSdk.Tests
 				Data = validVoidResponse
 			});
 
-			var response = _service.Void(Guid.NewGuid(), MerchantAuthenticationHelper.CreateMerchantAuthentication(), null);
+            var response = _service.Void(Guid.NewGuid(), MerchantAuthenticationHelper.CreateMerchantAuthentication(), VoidTransactionHelper.CreateValidVoidRequest());
 
 			response.ErrorDataCollection.Should().BeNull();
 			response.HttpStatus.Should().Be(HttpStatusCode.OK);
@@ -138,7 +138,7 @@ namespace BraspagApiDotNetSdk.Tests
 				Data = errorVoidResponse
 			});
 
-			var response = _service.Void(Guid.NewGuid(), MerchantAuthenticationHelper.CreateMerchantAuthentication(), null);
+			var response = _service.Void(Guid.NewGuid(), MerchantAuthenticationHelper.CreateMerchantAuthentication(), VoidTransactionHelper.CreateValidVoidRequest());
 
 			response.ErrorDataCollection.Count.Should().BeGreaterThan(0);
 			response.HttpStatus.Should().Be(HttpStatusCode.BadRequest);
@@ -159,7 +159,7 @@ namespace BraspagApiDotNetSdk.Tests
 					{
 						Href = "self",
 						Method = "GET",
-						Rel = "https://apisandbox.braspag.com.br/v1/sales/" + Guid.NewGuid()
+						Rel = "https://apisandbox.braspag.com.br/v2/sales/" + Guid.NewGuid()
 					}
 				},
 				ReasonCode = 0,
