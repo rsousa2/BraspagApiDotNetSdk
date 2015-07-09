@@ -10,3 +10,15 @@ C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Rel
 C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.csprojResolveAssemblyReference.cache
 C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.dll
 C:\Users\jsouza\Documents\GitHub\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.pdb
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\BraspagApiDotNetSdk.dll.config
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\BraspagApiDotNetSdk.dll
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\BraspagApiDotNetSdk.pdb
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Moq.dll
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Newtonsoft.Json.dll
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\RestSharp.dll
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Moq.xml
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Newtonsoft.Json.xml
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\RestSharp.xml
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.csprojResolveAssemblyReference.cache
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.dll
+C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.pdb
