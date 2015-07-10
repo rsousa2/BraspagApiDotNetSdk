@@ -33,5 +33,9 @@ namespace BraspagApiDotNetSdk.Contracts.Antifraud
         public ReplyData ReplyData { get; set; }
 
         public List<string> InvalidFields { get; set; }
+
+        public bool? CaptureOnLowRisk { get; set; }
+
+        public bool? VoidOnHighRisk { get; set; }
     }
 }
