@@ -12,6 +12,7 @@
         BancoDoBrasil,
         Citibank,
         Santander,
-        Hsbc
+        Hsbc,
+        SafetyPay
 	}
 }
