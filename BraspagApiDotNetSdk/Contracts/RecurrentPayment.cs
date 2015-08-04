@@ -3,7 +3,7 @@ using BraspagApiDotNetSdk.Contracts.Enum;
 
 namespace BraspagApiDotNetSdk.Contracts
 {
-    public class RecurrentPayment
+    public class RecurrentPayment : BaseResponse
     {
         public Guid? RecurrentPaymentId { get; set; }
 

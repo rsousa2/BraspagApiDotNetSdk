@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
 using BraspagApiDotNetSdk.Contracts;
@@ -169,6 +170,24 @@ namespace BraspagApiDotNetSdk.Services
             var response = RestClient.Execute<HttpStatusCode>(restRequest);
 
             return response.StatusCode;
+        }
+
+        public RecurrentQuery Get(Guid recurrentId, MerchantAuthentication merchantAuthentication)
+        {
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}", Method.GET) { RequestFormat = DataFormat.Json };
+            AddHeaders(restRequest, merchantAuthentication);
+
+            restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
+
+            var response = RestClient.Execute<RecurrentQuery>(restRequest);
+
+            var recurrentResponse = response.StatusCode == HttpStatusCode.OK
+                ? JsonDeserializer.Deserialize<RecurrentQuery>(response)
+                : new RecurrentQuery { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+
+            recurrentResponse.HttpStatus = response.StatusCode;
+
+            return recurrentResponse;
         }
 
         private static void AddHeaders(IRestRequest request, MerchantAuthentication auth)

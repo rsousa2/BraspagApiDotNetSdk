@@ -27,5 +27,7 @@ namespace BraspagApiDotNetSdk.Services
         HttpStatusCode UpdateRecurrentAmount(Guid recurrentId, MerchantAuthentication merchantAuthentication,long amount);
 
         HttpStatusCode UpdateRecurrentAffiliation(Guid recurrentId, MerchantAuthentication merchantAuthentication,PaymentCredentials affiliation);
+
+        RecurrentQuery Get(Guid recurrentId, MerchantAuthentication merchantAuthentication);
     }
 }

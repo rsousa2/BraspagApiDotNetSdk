@@ -93,6 +93,9 @@
     <Compile Include="Contracts\Payments\DebitCardPayment.cs" />
     <Compile Include="Contracts\Payments\EletronicTransferPayment.cs" />
     <Compile Include="Contracts\RecurrentPayment.cs" />
+    <Compile Include="Contracts\RecurrentPaymentQueryModel.cs" />
+    <Compile Include="Contracts\RecurrentQuery.cs" />
+    <Compile Include="Contracts\RecurrentTransaction.cs" />
     <Compile Include="Contracts\Sale.cs" />
     <Compile Include="Contracts\VoidRequest.cs" />
     <Compile Include="Contracts\VoidResponse.cs" />
