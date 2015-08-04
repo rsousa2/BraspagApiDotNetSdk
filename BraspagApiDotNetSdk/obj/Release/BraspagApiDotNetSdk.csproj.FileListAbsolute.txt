@@ -19,6 +19,5 @@ C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\R
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Moq.xml
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Newtonsoft.Json.xml
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\RestSharp.xml
-C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.csprojResolveAssemblyReference.cache
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.dll
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.pdb

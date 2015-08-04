@@ -66,7 +66,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode UpdateRecurrentPaymentRecurrencyDay(Guid recurrentId, MerchantAuthentication merchantAuthentication, byte day)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/RecurrencyDay", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
@@ -80,7 +80,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode ReactivateRecurrentPayment(Guid recurrentId, MerchantAuthentication merchantAuthentication)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Reactivate", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
@@ -92,7 +92,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode DeactivateRecurrentPayment(Guid recurrentId, MerchantAuthentication merchantAuthentication)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Deactivate", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
@@ -104,7 +104,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode UpdateRecurrentPaymentInstallments(Guid recurrentId, MerchantAuthentication merchantAuthentication, byte installments)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Installments", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
@@ -118,7 +118,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode UpdateRecurrentPaymentNextPaymentDate(Guid recurrentId, MerchantAuthentication merchantAuthentication, DateTime nextPaymentDate)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/NextPaymentDate", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
@@ -132,7 +132,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode UpdateRecurrentPayment(Guid recurrentId, MerchantAuthentication merchantAuthentication, Payment updatedPayment)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Payment", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
@@ -146,7 +146,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode UpdateRecurrentAmount(Guid recurrentId, MerchantAuthentication merchantAuthentication, long amount)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Amount", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
@@ -160,7 +160,7 @@ namespace BraspagApiDotNetSdk.Services
 
         public HttpStatusCode UpdateRecurrentAffiliation(Guid recurrentId, MerchantAuthentication merchantAuthentication, PaymentCredentials affiliation)
         {
-            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Interval", Method.PUT) { RequestFormat = DataFormat.Json };
+            var restRequest = new RestRequest(@"RecurrentPayment/{recurrentId}/Affiliation", Method.PUT) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
             restRequest.AddUrlSegment("recurrentId", recurrentId.ToString());
