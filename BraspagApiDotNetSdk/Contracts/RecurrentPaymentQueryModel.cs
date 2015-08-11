@@ -26,6 +26,7 @@ namespace BraspagApiDotNetSdk.Contracts
 
         public bool? AuthorizeNow { get; set; }
 
+        public short Installments { get; set; }
         public long Amount { get; set; }
         public string Country { get; set; }
         public DateTime CreateDate { get; set; }
