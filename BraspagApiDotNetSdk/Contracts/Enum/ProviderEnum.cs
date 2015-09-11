@@ -13,6 +13,9 @@
         Citibank,
         Santander,
         Hsbc,
-        SafetyPay
+        SafetyPay,
+        RedeSiTef,
+        CieloSiTef,
+        SantanderSiTef
 	}
 }
