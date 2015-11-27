@@ -32,9 +32,14 @@ namespace BraspagApiDotNetSdk.Services
 
             var response = RestClient.Execute<Sale>(restRequest);
 
-            var saleResponse = response.StatusCode == HttpStatusCode.Created
-                ? JsonConvert.DeserializeObject<Sale>(response.Content)
-                : new Sale { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            Sale saleResponse = null;
+
+            if (response.StatusCode == HttpStatusCode.Created)
+                saleResponse = JsonConvert.DeserializeObject<Sale>(response.Content);
+            else if(response.StatusCode == HttpStatusCode.BadRequest)
+                saleResponse = new Sale { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            else
+                saleResponse = new Sale();
 
             saleResponse.HttpStatus = response.StatusCode;
 
@@ -56,9 +61,14 @@ namespace BraspagApiDotNetSdk.Services
 
             var response = RestClient.Execute<CaptureResponse>(restRequest);
 
-            var captureResponse = response.StatusCode == HttpStatusCode.OK
-                ? JsonDeserializer.Deserialize<CaptureResponse>(response)
-                : new CaptureResponse { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            CaptureResponse captureResponse = null;
+
+            if (response.StatusCode == HttpStatusCode.Created)
+                captureResponse = JsonConvert.DeserializeObject<CaptureResponse>(response.Content);
+            else if (response.StatusCode == HttpStatusCode.BadRequest)
+                captureResponse = new CaptureResponse { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            else
+                captureResponse = new CaptureResponse();
 
             captureResponse.HttpStatus = response.StatusCode;
 
@@ -79,10 +89,16 @@ namespace BraspagApiDotNetSdk.Services
 
             var response = RestClient.Execute<VoidResponse>(restRequest);
 
-            var voidResponse = response.StatusCode == HttpStatusCode.OK
-                ? JsonDeserializer.Deserialize<VoidResponse>(response)
-                : new VoidResponse { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
 
+            VoidResponse voidResponse = null;
+
+            if (response.StatusCode == HttpStatusCode.Created)
+                voidResponse = JsonConvert.DeserializeObject<VoidResponse>(response.Content);
+            else if (response.StatusCode == HttpStatusCode.BadRequest)
+                voidResponse = new VoidResponse { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            else
+                voidResponse = new VoidResponse();
+            
             voidResponse.HttpStatus = response.StatusCode;
 
             return voidResponse;
@@ -97,9 +113,14 @@ namespace BraspagApiDotNetSdk.Services
 
             var response = RestClient.Execute<Sale>(restRequest);
 
-            var saleResponse = response.StatusCode == HttpStatusCode.OK
-                ? JsonDeserializer.Deserialize<Sale>(response)
-                : new Sale { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            Sale saleResponse = null;
+
+            if (response.StatusCode == HttpStatusCode.Created)
+                saleResponse = JsonConvert.DeserializeObject<Sale>(response.Content);
+            else if (response.StatusCode == HttpStatusCode.BadRequest)
+                saleResponse = new Sale { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            else
+                saleResponse = new Sale();
 
             saleResponse.HttpStatus = response.StatusCode;
 

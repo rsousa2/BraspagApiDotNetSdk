@@ -247,4 +247,4 @@
 *.pdb
 /Debug/
 /Release/
-/BraspagApiDotNetSdk/bin/Release
+/BraspagApiDotNetSdk/bin/

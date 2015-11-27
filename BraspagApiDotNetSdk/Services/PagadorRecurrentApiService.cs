@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
 using BraspagApiDotNetSdk.Contracts;
+using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Deserializers;
 
@@ -181,9 +182,14 @@ namespace BraspagApiDotNetSdk.Services
 
             var response = RestClient.Execute<RecurrentQuery>(restRequest);
 
-            var recurrentResponse = response.StatusCode == HttpStatusCode.OK
-                ? JsonDeserializer.Deserialize<RecurrentQuery>(response)
-                : new RecurrentQuery { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            RecurrentQuery recurrentResponse = null;
+
+            if (response.StatusCode == HttpStatusCode.Created)
+                recurrentResponse = JsonConvert.DeserializeObject<RecurrentQuery>(response.Content);
+            else if (response.StatusCode == HttpStatusCode.BadRequest)
+                recurrentResponse = new RecurrentQuery { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
+            else
+                recurrentResponse = new RecurrentQuery();
 
             recurrentResponse.HttpStatus = response.StatusCode;
 
