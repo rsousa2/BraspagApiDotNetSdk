@@ -92,7 +92,7 @@ namespace BraspagApiDotNetSdk.Services
 
             VoidResponse voidResponse = null;
 
-            if (response.StatusCode == HttpStatusCode.Created)
+            if (response.StatusCode == HttpStatusCode.OK)
                 voidResponse = JsonConvert.DeserializeObject<VoidResponse>(response.Content);
             else if (response.StatusCode == HttpStatusCode.BadRequest)
                 voidResponse = new VoidResponse { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
