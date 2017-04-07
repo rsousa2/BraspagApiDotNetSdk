@@ -20,5 +20,7 @@ namespace BraspagApiDotNetSdk.Contracts
 		public string Alias { get; set; }
 
 		public BrandEnum Brand { get; set; }
-	}
+
+        public Avs Avs { get; set; }
+    }
 }
