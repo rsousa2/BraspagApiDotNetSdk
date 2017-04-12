@@ -19,6 +19,7 @@ namespace BraspagApiDotNetSdk.Tests
         private PagadorApiService _service;
 
         private Mock<IRestClient> _mockRestClient;
+        private Sale _createOrder;
 
         [TestInitialize]
         public void TestInitialize()
@@ -301,7 +302,6 @@ namespace BraspagApiDotNetSdk.Tests
             response.ErrorDataCollection[0].Code.Should().Be(-1);
             response.ErrorDataCollection[0].Message.Should().Be("ErrorMessage: Undefined Error | ErrorException: System.Exception: Exceção de teste");
         }
-
         private static Sale ValidCreateSaleResponse(Payment payment)
         {
             return new Sale
