@@ -34,3 +34,15 @@ C:\Users\pfernandes\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Rel
 C:\Users\pfernandes\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.csprojResolveAssemblyReference.cache
 C:\Users\pfernandes\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.dll
 C:\Users\pfernandes\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.pdb
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\BraspagApiDotNetSdk.dll.config
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\BraspagApiDotNetSdk.dll
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\BraspagApiDotNetSdk.pdb
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Moq.dll
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Newtonsoft.Json.dll
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\RestSharp.dll
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Moq.xml
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\Newtonsoft.Json.xml
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Release\RestSharp.xml
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.csprojResolveAssemblyReference.cache
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.dll
+C:\vsts\Pagador\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Release\BraspagApiDotNetSdk.pdb
