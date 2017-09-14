@@ -28,6 +28,8 @@
         DmCard,
         Citibank2,
         ItauShopline,
-        Banese
+        Banese,
+        GlobalPayments,
+        FirstData
     }
 }

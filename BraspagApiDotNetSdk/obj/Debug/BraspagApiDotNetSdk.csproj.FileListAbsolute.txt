@@ -22,3 +22,14 @@ C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\D
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Debug\BraspagApiDotNetSdk.csprojResolveAssemblyReference.cache
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Debug\BraspagApiDotNetSdk.dll
 C:\Users\rneves.BRASP\Source\Repos\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Debug\BraspagApiDotNetSdk.pdb
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\BraspagApiDotNetSdk.dll.config
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\BraspagApiDotNetSdk.dll
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\BraspagApiDotNetSdk.pdb
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\Moq.dll
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\Newtonsoft.Json.dll
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\RestSharp.dll
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\Moq.xml
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\Newtonsoft.Json.xml
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\bin\Debug\RestSharp.xml
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Debug\BraspagApiDotNetSdk.dll
+C:\TFS\BraspagApiDotNetSdk\BraspagApiDotNetSdk\obj\Debug\BraspagApiDotNetSdk.pdb
