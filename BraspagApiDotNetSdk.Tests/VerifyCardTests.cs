@@ -52,7 +52,7 @@ namespace BraspagApiDotNetSdk.Tests
 
             response.Should().NotBeNull();
             response.ErrorDataCollection.Should().BeNull();
-            response.IsValid.Should().BeTrue();
+            response.Status.Should().Equals(1);
         }
 
         [TestMethod]
@@ -78,7 +78,7 @@ namespace BraspagApiDotNetSdk.Tests
 
             response.Should().NotBeNull();
             response.ErrorDataCollection.Should().BeNull();
-            response.IsValid.Should().BeFalse();
+            response.Status.Should().Equals(0);
         }
         
         [TestMethod]
