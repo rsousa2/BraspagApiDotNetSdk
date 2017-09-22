@@ -34,7 +34,10 @@ namespace BraspagApiDotNetSdk.Services
             
             VerifyCardResponse verifyCardResponse = null;
 
-            if (response.StatusCode == HttpStatusCode.Created)
+            if (response.StatusCode == HttpStatusCode.Created ||
+                response.StatusCode == HttpStatusCode.Accepted ||
+                response.StatusCode == HttpStatusCode.OK)
+
                 verifyCardResponse = JsonConvert.DeserializeObject<VerifyCardResponse>(response.Content);
             else if (response.StatusCode == HttpStatusCode.BadRequest)
                 verifyCardResponse = new VerifyCardResponse { ErrorDataCollection = JsonDeserializer.Deserialize<List<Error>>(response) };
