@@ -30,6 +30,7 @@
         ItauShopline,
         Banese,
         GlobalPayments,
-        FirstData
+        FirstData,
+        Getnet
     }
 }
