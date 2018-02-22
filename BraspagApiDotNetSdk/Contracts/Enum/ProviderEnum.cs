@@ -31,6 +31,7 @@
         Banese,
         GlobalPayments,
         FirstData,
-        Getnet
+        Getnet,
+        SantanderSitef
     }
 }
