@@ -30,7 +30,7 @@ namespace BraspagApiDotNetSdk.Services
             var restRequest = new RestRequest(@"sales", Method.POST) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
 
-            return SendCreateSale(sale, restRequest);
+            return PostSale(sale, restRequest);
         }
 
         public Sale CreateSale(MerchantAuthentication merchantAuthentication, Sale sale, Dictionary<string, string> headers)
@@ -39,7 +39,7 @@ namespace BraspagApiDotNetSdk.Services
             AddHeaders(restRequest, merchantAuthentication);
             AddCustomHeaders(restRequest, headers);
 
-            return SendCreateSale(sale, restRequest);
+            return PostSale(sale, restRequest);
         }
 
         public CaptureResponse Capture(Guid paymentId, MerchantAuthentication merchantAuthentication, CaptureRequest captureRequest)
@@ -152,7 +152,7 @@ namespace BraspagApiDotNetSdk.Services
             };
         }
 
-        private Sale SendCreateSale(Sale sale, RestRequest restRequest)
+        private Sale PostSale(Sale sale, RestRequest restRequest)
         {
             restRequest.AddBody(sale);
 
