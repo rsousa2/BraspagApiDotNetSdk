@@ -37,7 +37,7 @@ namespace BraspagApiDotNetSdk.Services
         {
             var restRequest = new RestRequest(@"sales", Method.POST) { RequestFormat = DataFormat.Json };
             AddHeaders(restRequest, merchantAuthentication);
-            AddCustomHeaders(restRequest, headers);
+            AddCustomHeaders(restRequest, headers ?? new Dictionary<string, string>());
 
             return PostSale(sale, restRequest);
         }

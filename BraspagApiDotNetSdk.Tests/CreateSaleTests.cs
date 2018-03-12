@@ -96,6 +96,40 @@ namespace BraspagApiDotNetSdk.Tests
         }
 
         [TestMethod]
+        public void CreateSale_WhenCustomHeaderIsNull_ShouldSendToApiServiceWithCorrecltyHeaders()
+        {
+            var validCreditCardSaleResponse = ValidCreateSaleResponse(CardTransactionHelper.CreateCreditCardPaymentResponse());
+
+            _mockRestClient.Setup(m => m.Execute<Sale>(It.IsAny<IRestRequest>())).Returns(new RestResponse<Sale>()
+            {
+                StatusCode = HttpStatusCode.OK,
+                Content = new JsonSerializer().Serialize(validCreditCardSaleResponse),
+                Data = validCreditCardSaleResponse
+            });
+
+            var merchantAuthentication = MerchantAuthenticationHelper.CreateMerchantAuthentication();
+
+            _service.CreateSale(merchantAuthentication,
+                SaleHelper.CreateOrder(CardTransactionHelper.CreateCreditCardPaymentRequest()),
+                null);
+
+            _mockRestClient.Verify(m => m.Execute<Sale>(It.IsAny<RestRequest>()), Times.Once);
+
+            _mockRestClient.Verify(m => m.Execute<Sale>(It.Is<RestRequest>(request => request.Method == Method.POST)), Times.Once);
+
+            _mockRestClient.Verify(m => m.Execute<Sale>(It.Is<RestRequest>(request => request.Resource == @"sales")), Times.Once);
+
+            _mockRestClient.Verify
+                (m => m.Execute<Sale>(
+                    It.Is<RestRequest>(
+                        request => request.Parameters[0].Name == "Content-Type" &&
+                                   request.Parameters[0].Value == "application/json" &&
+                                   request.Parameters[1].Name == "MerchantId" &&
+                                   request.Parameters[2].Name == "MerchantKey")
+                 ), Times.Once);
+        }
+
+        [TestMethod]
         public void CreateSale_Send_CreditCardTransaction_Return_Valid_Reponse()
         {
             var validCreditCardSaleResponse = ValidCreateSaleResponse(CardTransactionHelper.CreateCreditCardPaymentResponse());
