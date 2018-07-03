@@ -22,6 +22,8 @@ namespace BraspagApiDotNetSdk.Contracts
 		public string Type { get; set; }
 
 		public long Amount { get; set; }
+		
+		public long? Installments { get; set; }
 
         public DateTime ReceivedDate { get; set; }
 
